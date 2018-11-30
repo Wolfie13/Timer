@@ -1,0 +1,8 @@
+
+*.exe
+*.pdb
+*.vs/
+Timer/bin/
+Timer/obj/
+Timer/.vs/Timer/v14/.suo
+Timer/Timer.csproj.user
