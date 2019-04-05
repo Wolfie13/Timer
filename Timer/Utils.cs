@@ -26,11 +26,16 @@ namespace Timer
             IntPtr hWnd = GetForegroundWindow();
             if (hWnd != null)
             {
-                string appProcessName = Process.GetProcessById(GetWindowProcessID(hWnd)).ProcessName;
-                string appExePath = Process.GetProcessById(GetWindowProcessID(hWnd)).MainModule.FileName;
+                Int32 ID = GetWindowProcessID(hWnd);
+                if (ID == -1)
+                {
+                    return "";
+                }
+                //string appProcessName = Process.GetProcessById(ID).ProcessName;
+                string appExePath = Process.GetProcessById(ID).MainModule.FileName;
                 string appExeName = appExePath.Substring(appExePath.LastIndexOf(@"\") + 1);
 
-                return appExeName;
+                return appExeName.ToLower();
             }
 
             return "";

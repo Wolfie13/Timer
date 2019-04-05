@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Ticker = new System.Windows.Forms.Timer(this.components);
             this.lblLastApp = new System.Windows.Forms.Label();
-            this.TimeTrackerLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLastAppTime = new System.Windows.Forms.Label();
+            this.tbAllTimes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Ticker
@@ -51,13 +51,6 @@
             this.lblLastApp.TabIndex = 0;
             this.lblLastApp.Text = "Last Application:";
             // 
-            // TimeTrackerLayout
-            // 
-            this.TimeTrackerLayout.Location = new System.Drawing.Point(16, 60);
-            this.TimeTrackerLayout.Name = "TimeTrackerLayout";
-            this.TimeTrackerLayout.Size = new System.Drawing.Size(256, 189);
-            this.TimeTrackerLayout.TabIndex = 1;
-            // 
             // lblLastAppTime
             // 
             this.lblLastAppTime.AutoSize = true;
@@ -67,13 +60,22 @@
             this.lblLastAppTime.TabIndex = 2;
             this.lblLastAppTime.Text = "Used For: ";
             // 
+            // tbAllTimes
+            // 
+            this.tbAllTimes.Location = new System.Drawing.Point(16, 43);
+            this.tbAllTimes.Multiline = true;
+            this.tbAllTimes.Name = "tbAllTimes";
+            this.tbAllTimes.ReadOnly = true;
+            this.tbAllTimes.Size = new System.Drawing.Size(256, 206);
+            this.tbAllTimes.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.tbAllTimes);
             this.Controls.Add(this.lblLastAppTime);
-            this.Controls.Add(this.TimeTrackerLayout);
             this.Controls.Add(this.lblLastApp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -87,8 +89,8 @@
 
         private System.Windows.Forms.Timer Ticker;
         private System.Windows.Forms.Label lblLastApp;
-        private System.Windows.Forms.FlowLayoutPanel TimeTrackerLayout;
         private System.Windows.Forms.Label lblLastAppTime;
+        private System.Windows.Forms.TextBox tbAllTimes;
     }
 }
 
